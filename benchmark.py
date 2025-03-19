@@ -80,12 +80,12 @@ def run_benchmark(
     
     # Configure device settings
     device_settings = {"device_map": "auto", "low_cpu_mem_usage": True}
-    if use_hpu is not None:
-        # Only add HPU settings if explicitly requested
-        device_settings["ipex_config"] = {
-            "device": "hpu",
-            "distributed": False
-        }
+    # if use_hpu is not None:
+    #     # Only add HPU settings if explicitly requested
+    #     device_settings["ipex_config"] = {
+    #         "device": "hpu",
+    #         "distributed": False
+    #     }
     
     # Track timings
     results = {
